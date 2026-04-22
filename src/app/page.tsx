@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LayoutDashboard} from "lucide-react"; 
+import { LayoutDashboard, ShieldCheck} from "lucide-react"; 
 import Link from "next/link"; 
 import { Navigation, Clock, PhoneCall } from "lucide-react";
 import { 
@@ -101,12 +101,8 @@ export default function Home() {
         </Link>
           <div className="flex items-center gap-4">
   {/* Add this button for Admin Access */}
-        <Link href="/admin">
-          <button className={`p-2 rounded-xl transition ${
-            isScrolled ? "text-slate-400 hover:text-blue-600" : "text-white/50 hover:text-white"
-          }`} title="Admin Dashboard">
-            <LayoutDashboard size={20} />
-          </button>
+        <Link href="/admin/login" className="p-2 hover:bg-slate-100 rounded-full transition text-slate-600" title="Admin Login">
+          <ShieldCheck size={24} />
         </Link>
 
         </div>
